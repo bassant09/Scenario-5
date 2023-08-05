@@ -1,0 +1,18 @@
+<div class="container mt-5">
+    <h2 class="text-secondary fw-semibold "><i class="bi bi-house-lock-fill me-3"></i>{{shelter?.name}}'s Users</h2>
+    <div class="bg-white shadow mt-5" style="border-radius: 12px;">
+        <div class="  row p-5 m-0">
+            <div class="col-4" *ngFor="let user of users" >
+            <app-card [data]="user"></app-card>
+      </div>
+      <app-card *ngIf="users.length==0" [data]="null"></app-card>
+    <!-- <div class="col-4">
+        <app-booking-card></app-booking-card>
+    </div>
+    <div class="col-4">
+        <app-booking-card></app-booking-card>
+    </div> -->
+    </div>
+    
+    </div>
+    </div>

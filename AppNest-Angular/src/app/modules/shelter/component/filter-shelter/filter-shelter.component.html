@@ -1,0 +1,35 @@
+<div class="bg-white shadow " style="border-radius: 7px;">
+   <div class="p-3">
+    <h4 class="fw-semibold text-secondary">Filter</h4>
+    <hr>
+    <div class="mt-4">
+          <app-check-box (out)="isSelected(i,item.name)"  [title]="item.name" *ngFor="let item of filter let i = index"></app-check-box>
+         
+    </div>
+    <hr>
+    <div class="mt-3">
+     <h5 class="text-secondary fw-semibold">Tags</h5>
+     <div class="row p-4">
+      <ng-container *ngFor="let item of filter">
+            <div class="col-6 mb-3" *ngIf="item?.isSelected==true">
+                  <span class="bg-primary text-white p-2" style="border-radius: 15px;" >{{item.name}}</span>
+            </div>
+          </ng-container>
+     
+      <!-- <div class="col-6 mb-3">
+            <span class="bg-primary text-white p-2" style="border-radius: 15px;">Medicine</span>
+      </div>
+      <div class="col-6">
+            <span class="bg-primary text-white p-2" style="border-radius: 15px;">Medicine</span>
+      </div> -->
+      
+      
+     </div>
+     
+    </div>
+   </div>
+
+
+
+</div>
+<app-add-shelter-modal (add)="getAllShelter()"></app-add-shelter-modal>

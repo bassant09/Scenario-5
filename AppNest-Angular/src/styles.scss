@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+$primary: #f56f2c;
+
+$danger:#00A884;
+$warning:#075e54;
+$secondary: #1b2367;
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+*{
+   
+   //font-family:Arial, Helvetica, sans-serif
+   font-family:Georgia, 'Times New Roman', Times, serif
+ //  font-family: 'Inter', sans-serif;
+}
+body {
+    background-color: #f8f7fc;
+  }

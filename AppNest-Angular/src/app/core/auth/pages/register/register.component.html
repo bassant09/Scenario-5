@@ -1,0 +1,25 @@
+<div class="p-5 h-100 mt-3">
+    <form [formGroup]="formGroup" (submit)="register()">
+    <h2 class="text-primary fw-semibold ">Sign Up</h2>
+   <div class="mt-5">
+       <div class="mb-4">
+       <app-custom-iput [formGroupInput]="formGroup"
+       [formControlNameInput]="'userName'"[title]="'UserName'"></app-custom-iput>
+   </div>
+   <div class="mb-4">
+    <app-custom-iput [title]="'Email'"  [formGroupInput]="formGroup"
+    [formControlNameInput]="'email'" [typeInput]="'email'"></app-custom-iput>
+</div>
+<div class="mb-4">
+    <app-custom-iput [formGroupInput]="formGroup"
+    [formControlNameInput]="'password'" [title]="'password'" [typeInput]="'password'"></app-custom-iput>
+</div>
+<div class="mb-4">
+    <app-custom-iput  [formGroupInput]="formGroup"
+    [formControlNameInput]="'age'"[title]="'Age'" ></app-custom-iput>
+</div>
+
+   </div>
+   <button type="submit" class="btn btn-primary text-white w-100 mt-5" style="font-size: 18px;">Sign Up</button>
+</form>
+</div>

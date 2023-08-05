@@ -1,0 +1,35 @@
+<div >
+    <div class="row p-4 m-0">
+    <div class="col-2 m-0 p-0">
+        <app-filter-shelter (Out)="hi($event)"></app-filter-shelter>
+    </div>
+    <div class="col-10 m-0 p-0">
+    <div class="px-5">
+        <div class="d-flex justify-content-end">
+        <button  data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-white  text-primary p-3 add " style="border: 1px solid #F26821; width: 200px;"> Add New Shelter</button>
+       </div>
+   
+        <div class="row m-0 p-4">
+            <div class="col-3 mb-3" *ngFor="let shelter of shelters">
+                <app-shelter-card [data]="shelter"></app-shelter-card>
+            </div>
+            <!-- <div class="col-3 mb-3">
+                <app-shelter-card></app-shelter-card>
+            </div>
+            <div class="col-3 mb-3">
+                <app-shelter-card></app-shelter-card>
+            </div>
+            <div class="col-3 mb-3">
+                <app-shelter-card></app-shelter-card>
+            </div>
+            <div class="col-3 mb-3">
+                <app-shelter-card></app-shelter-card>
+            </div> -->
+
+        </div>
+    
+    </div>
+</div>
+</div>
+</div>
+<app-add-shelter-modal ></app-add-shelter-modal>

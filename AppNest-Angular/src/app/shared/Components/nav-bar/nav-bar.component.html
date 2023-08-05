@@ -1,0 +1,39 @@
+<app-nav-bar-first></app-nav-bar-first>
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow  w-100">
+    <div class="container">
+        <a routerLink=""> <img style="height: 80px; width: 80px;" src="assets/imgs/images__4_-removebg-preview (1).png"/></a>
+        <h4 class="text-primary fw-semibold m-0 p-0">AppNest</h4>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse ms-5" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a  href="shelter/get" class="nav-link active " aria-current="page" >Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="booking/requests">Booking Request</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn search text-primary" style="border: 1px solid #f56f2c;" type="submit">Search</button>
+        </form>
+        <div class="ms-5">
+        <button *ngIf="token==null" class="btn btn-primary text-white" style="border: 1px solid #f56f2c;" type="submit">Login</button>
+        <i *ngIf="token!=null" class="bi bi-box-arrow-right p-2 me-2 text-secondary" style="font-size:1.7rem;" (click)="logOut()"></i>
+    </div>
+      </div>
+    </div>
+  </nav>

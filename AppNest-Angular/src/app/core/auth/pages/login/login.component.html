@@ -1,0 +1,16 @@
+
+<div class="p-5 h-100 mt-3">
+    <h2 class="text-primary fw-semibold">Login</h2>
+    <form [formGroup]="formGroup" (submit)="login()">
+    <div class="mt-5">
+        <div class="mb-4">
+            <app-custom-iput   [title]="'Email'" [formGroupInput]="formGroup"
+            [formControlNameInput]="'email'" [typeInput]="'email'"></app-custom-iput>
+        </div>
+        <app-custom-iput  [title]="'password'" [formGroupInput]="formGroup"
+        [formControlNameInput]="'password'" [typeInput]="'password'"></app-custom-iput>
+    </div>
+    <a href="/auth/register" class="text-primary float-end p-3">Don't have account?</a>
+    </form>
+    <button (click)="login()" class="btn btn-primary text-white w-100 mt-5" style="font-size: 18px;">Sign In</button>
+</div>

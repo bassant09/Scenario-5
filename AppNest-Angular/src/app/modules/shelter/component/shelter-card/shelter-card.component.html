@@ -1,0 +1,13 @@
+
+   
+<div class="card bg-white shadow h-100 w-100" style="width: 18rem;">
+    <img *ngIf="data?.images[0]?.image!=null" [src]="'https://localhost:7192/Uploads/'+ data?.images[0]?.image" class="card-img-top" alt="...">
+    <img *ngIf="data?.images[0]?.image==null" src="assets/imgs/no-image.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title text-secondary fw-semibold">{{data.name}}</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <div class="d-flex justify-content-center align-items-center">
+      <button (click)="showDetails()" class="btn btn-primary text-white ">Show Details</button>
+    </div>
+    </div>
+  </div>

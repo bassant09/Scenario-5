@@ -1,0 +1,55 @@
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button> -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="resourceModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-secondary" id="exampleModalLabel">Book Now</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #close></button>
+        </div>
+        <div class="modal-body">
+            <div class="px-5">
+          <div class=" d-flex mb-4 justify-content-between">
+           
+            <h5 class="text-primary " ><i class="bi bi-droplet-fill me-3"></i>Water: </h5>
+            <input [(ngModel)]="object.water" class="p-2" type="number" />
+                
+          </div>
+          <div class=" d-flex mb-4 justify-content-between ">
+           
+            <h5 class="text-primary " ><i class="bi bi-cup-hot me-4"></i>Food: </h5>
+            <input [(ngModel)]="object.food"  class="p-2" type="number" />
+           
+          </div>
+          <div class=" d-flex mb-4 justify-content-between ">
+           
+            <h5 class="text-primary " ><i class="bi bi-capsule me-4"></i>Medicine: </h5>
+            <input [(ngModel)]="object.medicine" class="p-2" type="number" />
+           
+          </div>
+         
+          <div class=" d-flex mb-4 justify-content-between ">
+           
+            <h5 class="text-primary " ><i class="bi bi bi-bag-heart me-4"></i>Clothes: </h5>
+             <input [(ngModel)]="object.clothes"  class="p-2" type="number" />
+          </div>
+          <div class=" d-flex mb-4 justify-content-between ">
+           
+            <h5 class="text-primary " ><i class="bi bi-boxes me-4"></i>Toys: </h5>
+            <input [(ngModel)]="object.toy"  class="p-2" type="number" />
+            
+          </div>
+          
+        </div>
+    </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button (click)="editResorces()" type="button" class="btn btn-primary text-white">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>

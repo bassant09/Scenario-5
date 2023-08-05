@@ -1,0 +1,9 @@
+<div *ngIf="formGroupInput" [formGroup]="formGroupInput">
+    <h6 class="text-secondary mb-2">*{{title}}</h6>
+    <input class="p-3" [required]="isRequired" formControlName="{{formControlNameInput}}" [type]="typeInput" placeholder="{{title}}" [id]="id"  />
+</div>
+<div class="d-flex flex-column mb-3" *ngIf="!formGroupInput">
+    <label class="text-secondary mb-2">*{{title}}</label>
+    <input #input class="p-3 w-100" [required]="isRequired"  [type]="typeInput" placeholder="{{title}}" [id]="id" (keyup)="onValueChange.emit(input.value)"/>
+  </div>
+  
